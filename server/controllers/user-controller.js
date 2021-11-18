@@ -2,21 +2,24 @@ const User =  require('../models/user-model');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
-exports.signUp = async (req,  res, next) => {
+exports.signUp = async(req,  res, next) => {
 
     try {
+
+        const { name, email, mobile, organisation, password } = req.body;
+        
         // crypt the password
-        await bcrypt.hash(req.body.password, 10)
-            .then((hash) => {
+        await bcrypt.hash(password, 16)
+            .then(async (hash) => {
                 // create a user
                 const newUser = new User({
-                    name: req.body.name,
-                    email: req.body.email,
-                    mobile: req.body.mobile,
-                    organisation: req.body.organisation,
+                    name,
+                    email,
+                    mobile,
+                    organisation,
                     password: hash,
                 });
-
+                
                 const saveUser = await newUser.save();
                 return res.status(201).json({
                     message: saveUser,
@@ -24,12 +27,12 @@ exports.signUp = async (req,  res, next) => {
                 });
 
             }).catch(err => res.status(500).json({
-                message: err,
+                message: err.message,
                 success: false
             }));
     } catch (error) {
         return res.status(400).json({
-            message: error,
+            message: error.message,
             success: false
         });
     }    
@@ -72,12 +75,12 @@ exports.login = async (req, res, next) => {
                     )
                 });
             }).catch(err => res.status(500).json({
-                message: err,
+                message: err.message,
                 success: false
             }));
     } catch (error) {
         return res.status(401).json({
-            message: error,
+            message: error.message,
             success: false
         });
     }
