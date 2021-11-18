@@ -21,8 +21,15 @@ exports.signUp = async(req,  res, next) => {
                 });
                 
                 const saveUser = await newUser.save();
+                
                 return res.status(201).json({
-                    message: saveUser,
+                    user: saveUser,
+                    token: jwt.sign(
+                        {email: newUser.email},
+                        'RANDOM_TOKEN_SECRET',
+                        {expiresIn: '24h'}
+
+                    ),
                     success: true
                 });
 
@@ -45,8 +52,7 @@ exports.login = async (req, res, next) => {
         const { email, password } = req.body;
 
         // find user
-        const user = await User.find({ email });
-
+        const user = await User.findOne({ email });
         if(!user){
             return res.status(404).json({
                 message: 'User not found',
@@ -60,11 +66,11 @@ exports.login = async (req, res, next) => {
 
                 if(!valid) {
                     return res.status(401).json({
-                        message: 'Mot de passe incorrect',
-                        success: false
-                    });
+                            message: 'Mot de passe incorrect',
+                            success: false
+                        });
                 }
-
+                
                 // password is correct, return created token
                 return res.status(200).json({
                     userId: user._id,
@@ -78,6 +84,7 @@ exports.login = async (req, res, next) => {
                 message: err.message,
                 success: false
             }));
+
     } catch (error) {
         return res.status(401).json({
             message: error.message,

@@ -17,7 +17,6 @@ const UserSchema = new Schema({
     },
     organisation:{
         type: String,
-        unique: true,
         required: true
     },
     password:{
