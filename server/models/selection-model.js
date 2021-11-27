@@ -1,11 +1,11 @@
 const { model, Schema } = require('mongoose');
 
-const OffreSchema = new Schema({
-    offre: {
+const SelectionSchema = new Schema({
+    offreId: {
         type: Schema.Types.ObjectId,
         ref: 'Offre'
     },
-    candidat: {
+    candidatId: {
         type: Schema.Types.ObjectId,
         ref: 'Candidat'
     },
@@ -35,4 +35,4 @@ const OffreSchema = new Schema({
     }
 });
 
-module.exports = model('Offre', OffreSchema);
+module.exports = model('Selection', SelectionSchema);

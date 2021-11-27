@@ -31,10 +31,10 @@ exports.getAll = async (req, res) => {
 
 exports.getOne = async (req, res) => {
     try {
-        const allCandidats = await Candidat.findOne({poste});
-        if(!allCandidats) return res.status(404).json("Ce candidat n'existe pas !");
+        const candidat = await Candidat.findOne({poste});
+        if(!candidat) return res.status(404).json("Ce candidat n'existe pas !");
 
-        return res.status(200).json(allCandidats);
+        return res.status(200).json(candidat);
     } catch (error) {
         return res.status(400).json({ error });
     }

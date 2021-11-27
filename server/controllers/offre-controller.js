@@ -34,7 +34,7 @@ exports.getOne = async (req, res) => {
         const offre = await Offre.findOne({poste});
         if(!offre) return res.status(404).json("Cet offre n'existe pas !");
 
-        return res.status(200).json(allOffres);
+        return res.status(200).json(offre);
     } catch (error) {
         return res.status(400).json({ error });
     }
