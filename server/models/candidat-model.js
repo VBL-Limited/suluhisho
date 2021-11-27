@@ -1,17 +1,5 @@
 const { model, Schema } = require('mongoose');
 
-const ProfileSchema = new Schema({
-
-    profession: {
-        type: String,
-        required: true
-    },
-    anne_experience:{
-        type: String,
-        required: true
-    }
-});
-
 const CandidatSchema = new Schema({
     nom: {
         type: String,
@@ -33,7 +21,14 @@ const CandidatSchema = new Schema({
         type: String,
         required: true
     },
-    profile: ProfileSchema    
+    profession: {
+        type: String,
+        required: true
+    },
+    anne_experience:{
+        type: String,
+        required: true
+    }    
 });
 
 module.exports = model('Candidat', CandidatSchema);

@@ -23,18 +23,16 @@ exports.create = async (req, res) => {
 exports.getAll = async (req, res) => {
     try {
         const allOffres = await Offre.find();
-        if(!allOffres) return res.status(404).json("Pas d'offres disponibles !");
-
         return res.status(200).json(allOffres);
     } catch (error) {
-        return res.status(400).json({ error });
+        return res.status(404).json({ error });
     }
 };
 
 exports.getOne = async (req, res) => {
     try {
         const offre = await Offre.findOne({poste});
-        if(!ffre) return res.status(404).json("Cet offre n'existe pas !");
+        if(!offre) return res.status(404).json("Cet offre n'existe pas !");
 
         return res.status(200).json(allOffres);
     } catch (error) {
