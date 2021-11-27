@@ -3,12 +3,13 @@ require('dotenv').config();
 const { connect } = require('mongoose');
 
 const userRoutes = require('./routes/user-routes');
-
+const offreRoutes = require('./routes/offre-routes');
 const app = express();
 
 // routes
 app.use(express.json());
 app.use('/api/auth', userRoutes);
+app.use('/api/offre', offreRoutes);
 
 
 const port = process.env.PORT || 5000;
