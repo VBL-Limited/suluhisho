@@ -32,7 +32,7 @@ exports.getAll = async (req, res) => {
 
 exports.getOne = async (req, res) => {
     try {
-        const selection = await Selection.findOne({poste});
+        const selection = await Selection.findOne({ _id: req.params.id });
         if(!selection) return res.status(404).json("Cette selection n'existe pas !");
 
         return res.status(200).json(selection);

@@ -31,7 +31,7 @@ exports.getAll = async (req, res) => {
 
 exports.getOne = async (req, res) => {
     try {
-        const candidat = await Candidat.findOne({poste});
+        const candidat = await Candidat.findOne({_id: req.params.id});
         if(!candidat) return res.status(404).json("Ce candidat n'existe pas !");
 
         return res.status(200).json(candidat);

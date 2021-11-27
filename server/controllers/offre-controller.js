@@ -31,7 +31,7 @@ exports.getAll = async (req, res) => {
 
 exports.getOne = async (req, res) => {
     try {
-        const offre = await Offre.findOne({poste});
+        const offre = await Offre.findOne({_id: req.params.id});
         if(!offre) return res.status(404).json("Cet offre n'existe pas !");
 
         return res.status(200).json(offre);
