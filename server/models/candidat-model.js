@@ -1,42 +1,34 @@
 const { model, Schema } = require('mongoose');
-const uniqueValidator = require('mongoose-unique-validator');
 
-const UserSchema = new Schema({
-    denomination_sociale:{
+const CandidatSchema = new Schema({
+    nom: {
         type: String,
         required: true
     },
-    forme_juridique:{
+    postnom: {
         type: String,
         required: true
     },
-    ville:{
+    prenom: {
         type: String,
         required: true
     },
-    adresse:{
+    email: {
         type: String,
         required: true
     },
-    email:{
-        type: String,
-        unique: true,
-        required: true
-    },
-    password:{
+    adresse: {
         type: String,
         required: true
     },
-    mobile:{
+    profession: {
         type: String,
         required: true
     },
-    createdAt:{
-        type: Date,
-        default: Date.now()
-    }
+    anne_experience:{
+        type: String,
+        required: true
+    }    
 });
 
-UserSchema.plugin(uniqueValidator);
-
-module.exports = model('User', UserSchema);
+module.exports = model('Candidat', CandidatSchema);

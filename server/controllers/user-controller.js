@@ -6,18 +6,28 @@ exports.signUp = async(req,  res, next) => {
 
     try {
 
-        const { name, email, mobile, organisation, password } = req.body;
+        const { 
+            denomination_sociale, 
+            forme_juridique, 
+            ville, 
+            adresse, 
+            email, 
+            password, 
+            mobile 
+        } = req.body;
         
         // crypt the password
         await bcrypt.hash(password, 16)
             .then(async (hash) => {
                 // create a user
                 const newUser = new User({
-                    name,
+                    denomination_sociale,
+                    forme_juridique,
+                    ville,
+                    adresse,
                     email,
-                    mobile,
-                    organisation,
                     password: hash,
+                    mobile
                 });
                 
                 const saveUser = await newUser.save();
