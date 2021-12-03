@@ -6,6 +6,7 @@ import {
   Button,
   TextField,
   Grid,
+  Typography,
 } from '@mui/material'
 import * as Yup from 'yup'
 import { Formik } from 'formik'
@@ -46,9 +47,12 @@ const SignUpForm = ({
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
+        style={{ borderRadius: '50px' }}
       >
         <DialogTitle id="alert-dialog-title" style={{ textAlign: 'center' }}>
-          Creer un compte Suluhisho{' '}
+          <div>
+            <Typography variant="h6">Creer un compte Suluhisho </Typography>
+          </div>
         </DialogTitle>
 
         <DialogContent>
@@ -157,7 +161,11 @@ const SignUpForm = ({
                   <Grid item xs={12}>
                     <Button
                       variant="contained"
-                      sx={{ backgroundColor: colors.primary, width: '100%' }}
+                      sx={{
+                        backgroundColor: colors.primary,
+                        width: '100%',
+                        height: '60px',
+                      }}
                       size="large"
                       type="submit"
                     >
