@@ -97,35 +97,22 @@ const Header = () => {
               backgroundImage: `url(${backgroundImage})`,
             }}
           >
-            <div className="grid grid-cols-3 gap-2 ">
-              <div className="col-span-2 py-10 px-7">
+            <div className="flex flex-col ">
+              <div className="py-10 px-7">
                 <span className="font-bold text-white text-8xl ">
                   Recherchez parmi plus de 50 000 offres d'emploi.
                 </span>
-                <div className="flex mt-8 mb-10 border-4 shadow-md bord-gray-900 rounded-3xl">
+                <div className="flex justify-between mt-8 mb-10 shadow-md w-96 rounded-3xl">
                   <div>
                     <div className="">
                       <input
                         type="text"
-                        placeholder="Rechercher..."
-                        className="w-full px-6 py-6 border-r-2 text-1xl rounded-l-3xl focus:outline-none"
+                        placeholder="mots clés..."
+                        className="px-6 py-6 border-r-2 w-96 text-1xl rounded-l-3xl focus:outline-none"
                       ></input>
                     </div>
                   </div>
-                  <div className="flex">
-                    <input
-                      type="text"
-                      className="w-full px-6 py-6 border-r-2 focus:outline-none text-1xl "
-                      placeholder="Province"
-                    ></input>
-                  </div>
-                  <div className="">
-                    <input
-                      type="text"
-                      className="w-full px-6 py-6 border-r-1 focus:outline-none text-1xl "
-                      placeholder="Categories"
-                    ></input>
-                  </div>
+
                   <div>
                     <button className="block w-auto px-40 py-6 font-bold text-white bg-blue-900 rounded-r-3xl hover:bg-blue-800 text-1xl ">
                       Rechercher

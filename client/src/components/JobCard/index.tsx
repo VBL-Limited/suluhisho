@@ -45,7 +45,7 @@ const JobCard = () => {
                 <p className="px-4 py-4 text-gray-500">
                   Creer un site web pour l'organization.
                 </p>
-                <button className="w-full py-3 text-white bg-blue-900 rounded-lg hover:bg-blue-800">
+                <button className="w-full py-3 font-mono text-blue-900 uppercase bg-white border-2 border-blue-900 rounded-lg font-bolg hover:text-white hover:bg-blue-800">
                   Postuler
                 </button>
               </div>
@@ -72,7 +72,7 @@ const JobCard = () => {
                 <p className="px-4 py-4 text-gray-500">
                   Creer un site web pour l'organization.
                 </p>
-                <button className="w-full py-3 text-white bg-blue-900 rounded-lg hover:bg-blue-800">
+                <button className="w-full py-3 font-mono text-blue-900 uppercase bg-white border-2 border-blue-900 rounded-lg font-bolg hover:text-white hover:bg-blue-800">
                   Postuler
                 </button>
               </div>
@@ -98,7 +98,7 @@ const JobCard = () => {
                 <p className="px-4 py-4 text-gray-500">
                   Creer un site web pour l'organization.
                 </p>
-                <button className="w-full py-3 text-white bg-blue-900 rounded-lg hover:bg-blue-800">
+                <button className="w-full py-3 font-mono text-blue-900 uppercase bg-white border-2 border-blue-900 rounded-lg font-bolg hover:text-white hover:bg-blue-800">
                   Postuler
                 </button>
               </div>
@@ -124,14 +124,14 @@ const JobCard = () => {
                 <p className="px-4 py-4 text-gray-500">
                   Creer un site web pour l'organization.
                 </p>
-                <button className="w-full py-3 text-white bg-blue-900 rounded-lg hover:bg-blue-800">
+                <button className="w-full py-3 font-mono text-blue-900 uppercase bg-white border-2 border-blue-900 rounded-lg font-bolg hover:text-white hover:bg-blue-800">
                   Postuler
                 </button>
               </div>
             </div>
           </div>
           <div className="flex justify-center mt-3">
-            <button className="px-8 py-5 font-bold text-white duration-300 bg-blue-900 rounded-md hover:shadow-xl hover:bg-blue-800">
+            <button className="px-8 py-5 font-bold text-white duration-300 bg-blue-900 border-2 rounded-md hover:border-blue-900 hover:border-2 hover:text-blue-900 hover: hover:shadow-xl hover:bg-white">
               Parcourir tous les emplois
             </button>
           </div>
