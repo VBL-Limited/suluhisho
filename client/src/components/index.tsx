@@ -1,4 +1,5 @@
-import Header from './Header';
-import LoginForm from './LoginForm';
-import SignUpForm from './SignUpForm';
-export { Header, LoginForm, SignUpForm };
+import Header from './Header'
+import JobCard from './JobCard'
+import CategoryCard from './CategoryCard'
+import Footer from './Footer'
+export { Header, JobCard, CategoryCard, Footer }

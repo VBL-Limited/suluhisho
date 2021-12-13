@@ -1,60 +1,70 @@
-<p align="center">
-  <img width="43%" src="./react-logo-png.png" />
-</p>
+# Getting Started with Create React App
 
-# React, TypeScript, and Material-UI boilerplate
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Introduction
+## Available Scripts
 
-Welcome to the first app template built by [Welcome, Developer](https://www.welcomedeveloper.com)! This is a boilerplate app built using React, TypeScript, Material-UI, and uses the concept of CSS-in-JS. It has the purpose of supporting our post exercises, but also to provide our followers with a good start point when building React applications.
+In the project directory, you can run:
 
-Hope you enjoy it, developers!
+### `yarn start`
 
-## Demo
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Keen to see the app in action? Check it out the [live demo](https://weldev-react-mui-ts.vercel.app/)!
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## Behind-the-scenes
+### `yarn test`
 
-Interested in learning how the app was built from scratch step-by-step on version 1.00? Check [it out](https://www.welcomedeveloper.com/react-typescript-material-design), developers!
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-The versions that followed the first one, 1.10 and 2.00, consist of adding coding formatting libraries (ESLint and Prettier), and updating the Material-UI library to its latest version (v5.0.1). I highly recommend you to explore the tutorial above to learn how the app was built.
+### `yarn build`
 
-## Features
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The following frameworks/libraries have been implemented:
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-1. [React](https://reactjs.org/)
-2. [TypeScript](https://www.typescriptlang.org/)
-3. [Material-UI](https://mui.com/)
-4. [React Router](https://reactrouter.com/)
-5. [Prettier](https://prettier.io)
-6. [ESLint](https://eslint.org/)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Install
+### `yarn eject`
 
-To get up and running with the template, you just have to run the _git_ commands below:
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-```
-git clone https://github.com/danilocastronz/weldev-project-react-mui-ts-bp
-cd weldev-project-react-mui-ts-bp
-yarn install
-```
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Contributions
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Contributions are more than welcome to our repository, developers. The goal is to make it a space where we contribute together to make it better! Feel free to create your own _pull request_ with the contribution, or if you prefer, reach out to me with your idea 🙋‍♂️
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Versions
+## Learn More
 
-- 1.00 - Admin template with sample pages, top bar, navigation menu, and footer.
-- 1.10 - Added Prettier, ESLint, and a bit of code refactoring.
-- 2.00 - Updated to Material-UI version 5.0.1.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Author
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- [Dan Castro](https://github.com/danilocastronz)
+### Code Splitting
 
-## Follow Us
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Enjoyed the project? Follow us on [LinkedIn](https://www.linkedin.com/company/welcomedeveloper) and [Twitter](https://twitter.com/welcomedevnz).
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

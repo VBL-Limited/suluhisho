@@ -54,8 +54,8 @@ exports.login = async (req, res, next) => {
         // find user
         const user = await User.findOne({ email });
         if(!user){
-            return res.status(404).json({
-                message: 'User not found',
+            return res.status(200).json({
+                message: `Vos identifiants n'existent pas dans notre base de données.Veuillez réessayer`,
                 success: false
             });
         }
@@ -65,7 +65,7 @@ exports.login = async (req, res, next) => {
             .then((valid) => {
 
                 if(!valid) {
-                    return res.status(401).json({
+                    return res.status(200).json({
                             message: 'Mot de passe incorrect',
                             success: false
                         });
