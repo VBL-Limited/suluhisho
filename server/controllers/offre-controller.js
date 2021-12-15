@@ -20,10 +20,36 @@ exports.create = async (req, res) => {
     }
 };
 
-exports.getAll = async (req, res) => {
+// pagination here
+function paginatedResults() {
+    return async (req, res, next) => {
+      
+      
+    };
+  }
+
+exports.getAll = async (req, res, next) => {
     try {
-        const allOffres = await Offre.find();
-        return res.status(200).json(allOffres);
+        // const allOffres = await Offre.find();
+        const page = parseInt(req.query.page);
+        const limit = parseInt(req.query.limit);
+        const skipIndex = (page - 1) * limit;
+        const results = {};
+    
+        try {
+            results.results = await Offre.find()
+                .sort()
+                .limit(limit)
+                .skip(skipIndex)
+                .exec();
+            res.paginatedResults = results;
+            
+            
+        return res.status(200).json(res.paginatedResults);
+
+        } catch (e) {
+            res.status(500).json({ message: "Erreur survenue" });
+        }
     } catch (error) {
         return res.status(404).json({ error });
     }
