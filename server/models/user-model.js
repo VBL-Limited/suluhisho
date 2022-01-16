@@ -6,7 +6,7 @@ const OrganisationSchema = new Schema({
         type: String,
         required: true
     },
-	formeJuridique: {
+	forme_juridique: {
         type: String,
         required: true
     },
@@ -40,7 +40,7 @@ const UserSchema = new Schema({
         type: String,
         defaut: 'AGENT'
     },    
-    denomination_sociale: OrganisationSchema,
+    organisation: OrganisationSchema,
     ville:{
         type: String,
         required: true

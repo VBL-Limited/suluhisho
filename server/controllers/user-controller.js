@@ -11,10 +11,9 @@ exports.signUp = async(req,  res, next) => {
             password, 
             mobile, 
             role, 
-            denomination_sociale, 
-            forme_juridique, 
+            organisation, 
             ville,
-            adresse 
+            adresse
         } = req.body;
         
         // crypt the password
@@ -26,8 +25,7 @@ exports.signUp = async(req,  res, next) => {
                     password: hash,
                     mobile,
                     role,
-                    denomination_sociale,
-                    forme_juridique,
+                    organisation,
                     ville,
                     adresse
                 });

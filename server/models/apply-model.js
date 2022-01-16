@@ -15,4 +15,4 @@ const ApplySchema = new Schema({
     }
 });
 
-module.exports = model('Apply', ApplySchema);
+module.exports = model('Application', ApplySchema);

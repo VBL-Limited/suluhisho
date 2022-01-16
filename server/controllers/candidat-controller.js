@@ -6,13 +6,16 @@ exports.create = async(req,  res, next) => {
 
     try {
 
-        const { 
+        const {     
+            nom, 
+            postnom, 
+            prenom,
             email, 
             password, 
             mobile, 
-            nom, 
-            postnom, 
-            prenom
+            profession,
+            anne_experience,
+            adresse
         } = req.body;
         
         // crypt the password
@@ -25,7 +28,10 @@ exports.create = async(req,  res, next) => {
                     mobile,
                     nom,
                     postnom,
-                    prenom
+                    prenom,
+                    profession,
+                    anne_experience,
+                    adresse
                 });
                 
                 const saveCandidat = await newCandidat.save();

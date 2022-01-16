@@ -30,7 +30,7 @@ const CandidatSchema = new Schema({
         unique: true,
         required: true
     },
-    phone: {
+    mobile: {
         type: String,
         unique: true,
         required: true
@@ -65,5 +65,7 @@ const CandidatSchema = new Schema({
     engagedTo: EngagementSchema
     
 });
+
+CandidatSchema.plugin(uniqueValidator);
 
 module.exports = model('Candidat', CandidatSchema);
