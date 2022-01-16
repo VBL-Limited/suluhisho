@@ -2,7 +2,7 @@ const { model, Schema } = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 
 const UserSchema = new Schema({
-       
+    
     email:{
         type: String,
         unique: true,
@@ -21,7 +21,7 @@ const UserSchema = new Schema({
         type: String,
         defaut: 'AGENT'
     },    
-    denomination_sociale:{
+    denomination_sociale:{ // we can use this as a user id
         type: String,
         required: true
     },

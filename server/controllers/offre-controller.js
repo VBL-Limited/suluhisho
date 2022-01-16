@@ -9,7 +9,8 @@ exports.create = async (req, res) => {
             date_publication,
             date_limite,
             details_offre,
-            email
+            email,
+            mobile
         } = req.body;
 
         const newOffre = new Offre({ ...req.body} );
@@ -23,8 +24,6 @@ exports.create = async (req, res) => {
 // pagination here
 function paginatedResults() {
     return async (req, res, next) => {
-      
-      
     };
   }
 
@@ -66,6 +65,18 @@ exports.getOne = async (req, res) => {
     }
 };
 
+
+exports.getByTag = async (req, res) => {
+    try {
+        const offre = await Offre.findOne({tag: req.params.tag});
+        if(!offre) return res.status(404).json("Cet offre n'existe pas, ou ce tag est invalide !");
+
+        return res.status(200).json(offre);
+    } catch (error) {
+        return res.status(400).json({ error });
+    }
+};
+
 exports.update = async (req, res) => {
     try {
         const {
@@ -75,7 +86,8 @@ exports.update = async (req, res) => {
             date_publication,
             date_limite,
             details_offre,
-            email
+            email,
+            mobile
         } = req.body;
 
         const updateOffre = await Offre.findOneAndUpdate({ _id: req.params.id }, { ... req.body }, { new: true});
