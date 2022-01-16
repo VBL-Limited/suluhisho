@@ -1,5 +1,12 @@
 const { model, Schema } = require('mongoose');
+const uniqueValidator = require('mongoose-unique-validator');
 
+const EngagementSchema = new Schema({
+    OrganisationId: { type: String },
+    startDate: { type: Date },
+    contractTime: { type: String }, // in days
+    typeContract: { type: String }, // PART-TIME or FULL-TIME
+})
 const CandidatSchema = new Schema({
     nom: {
         type: String,
@@ -15,6 +22,17 @@ const CandidatSchema = new Schema({
     },
     email: {
         type: String,
+        unique: true,
+        required: true
+    },
+    password: {
+        type: String,
+        unique: true,
+        required: true
+    },
+    phone: {
+        type: String,
+        unique: true,
         required: true
     },
     adresse: {
@@ -28,7 +46,24 @@ const CandidatSchema = new Schema({
     anne_experience:{
         type: String,
         required: true
-    }    
+    },
+    cv:{
+        type: String,
+    },
+    resume:{
+        type: String,
+    },
+    date_of_birth:{
+        type: Date
+    },
+    place_of_birth:{
+        type: String
+    },
+    nationality:{
+        type: String
+    },
+    engagedTo: EngagementSchema
+    
 });
 
 module.exports = model('Candidat', CandidatSchema);

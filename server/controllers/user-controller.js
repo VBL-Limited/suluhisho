@@ -7,13 +7,14 @@ exports.signUp = async(req,  res, next) => {
     try {
 
         const { 
-            denomination_sociale, 
-            forme_juridique, 
-            ville, 
-            adresse, 
             email, 
             password, 
-            mobile 
+            mobile, 
+            role, 
+            denomination_sociale, 
+            forme_juridique, 
+            ville,
+            adresse 
         } = req.body;
         
         // crypt the password
@@ -21,13 +22,14 @@ exports.signUp = async(req,  res, next) => {
             .then(async (hash) => {
                 // create a user
                 const newUser = new User({
+                    email,
+                    password: hash,
+                    mobile,
+                    role,
                     denomination_sociale,
                     forme_juridique,
                     ville,
-                    adresse,
-                    email,
-                    password: hash,
-                    mobile
+                    adresse
                 });
                 
                 const saveUser = await newUser.save();

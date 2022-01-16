@@ -2,6 +2,25 @@ const { model, Schema } = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 
 const UserSchema = new Schema({
+       
+    email:{
+        type: String,
+        unique: true,
+        required: true
+    },
+    password:{
+        type: String,
+        required: true
+    },
+    mobile:{
+        type: String,
+        unique: true,
+        required: true
+    },
+    role: {
+        type: String,
+        defaut: 'AGENT'
+    },    
     denomination_sociale:{
         type: String,
         required: true
@@ -15,19 +34,6 @@ const UserSchema = new Schema({
         required: true
     },
     adresse:{
-        type: String,
-        required: true
-    },
-    email:{
-        type: String,
-        unique: true,
-        required: true
-    },
-    password:{
-        type: String,
-        required: true
-    },
-    mobile:{
         type: String,
         required: true
     },
