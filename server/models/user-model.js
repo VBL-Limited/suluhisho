@@ -1,6 +1,25 @@
 const { model, Schema } = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 
+const OrganisationSchema = new Schema({
+    denomination: {
+        type: String,
+        required: true
+    },
+	formeJuridique: {
+        type: String,
+        required: true
+    },
+	state:{  
+        type: String,
+        defualt: 'TRIAL' //- [trial, paid, ....]
+    },
+	duration: {
+        type: Number,
+        default: 0 // in days
+    }
+});
+
 const UserSchema = new Schema({
     
     email:{
@@ -21,14 +40,7 @@ const UserSchema = new Schema({
         type: String,
         defaut: 'AGENT'
     },    
-    denomination_sociale:{ // we can use this as a user id
-        type: String,
-        required: true
-    },
-    forme_juridique:{
-        type: String,
-        required: true
-    },
+    denomination_sociale: OrganisationSchema,
     ville:{
         type: String,
         required: true
