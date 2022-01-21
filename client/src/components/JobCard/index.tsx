@@ -1,18 +1,34 @@
 import backgroundImage from '../../img/m2.jpeg'
 import job from '../../img/job.jpeg'
 import logo from '../../img/logo.PNG'
+import { useState } from 'react'
 const JobCard = () => {
+  const [currentOffer, setCurrentOffer] = useState(true)
+
+  const handleJobOffers = () => {
+    setCurrentOffer(false)
+  }
   return (
     <>
       <div className="">
         <div className="flex items-center justify-center ">
-          <div className="flex justify-between p-3 mt-6 text-white bg-blue-900 border-2 border-gray-600 rounded-md shadow-md w-3/2">
-            <a
-              href="#"
-              className="px-8 py-3 font-semibold text-white bg-blue-900 rounded-sm hover:bg-white hover:text-blue-900 text-md"
-            >
-              Dernières offres d'emploi
-            </a>
+          <div className="flex justify-between p-3 mt-6 text-white bg-blue-900 border-2 border-gray-600 rounded-md shadow-md w-3/1">
+            {currentOffer ? (
+              <a
+                onClick={handleJobOffers}
+                href="#"
+                className="px-8 py-3 font-semibold text-white bg-blue-900 rounded-sm hover:bg-white hover:text-blue-900 text-md"
+              >
+                Dernières offres d'emploi
+              </a>
+            ) : (
+              <a
+                href="#"
+                className="px-8 py-3 font-semibold text-blue-900 bg-white rounded-sm text-md"
+              >
+                Dernières offres d'emploi
+              </a>
+            )}
             <a
               href="#"
               className="px-8 py-3 font-semibold text-white bg-blue-900 rounded-sm text-md hover:bg-white hover:text-blue-900"
@@ -22,9 +38,9 @@ const JobCard = () => {
           </div>
         </div>
         {/* //Card */}
-        <div className="mb-5">
-          <div className="grid grid-cols-4 gap-2 p-8 mt-10 ml-6 mr-6 drop-shadow-md bg-white-100 ">
-            <div className="ml-6 transition duration-500 transform bg-white shadow-2xl hover:shadow-4xl rounded-2xl hover:scale-110">
+        <div className="">
+          <div className="grid grid-cols-4 gap-3 p-8 drop-shadow-md bg-white-100 ">
+            <div className="transition duration-500 transform bg-white shadow-2xl hover:shadow-4xl rounded-2xl hover:scale-110">
               <div className="flex justify-between p-4 ">
                 <span className="px-2 py-2 font-sans text-sm text-blue-900 bg-blue-200 rounded-md">
                   À temps plein
@@ -51,7 +67,7 @@ const JobCard = () => {
               </div>
             </div>
 
-            <div className="ml-6 transition duration-500 transform shadow-2xl rounded-2xl hover:scale-110">
+            <div className="transition duration-500 transform shadow-2xl rounded-2xl hover:scale-110">
               <div className="flex justify-between p-4 ">
                 <span className="px-2 py-2 font-sans text-sm text-blue-900 bg-blue-200 rounded-md">
                   À temps plein
@@ -77,7 +93,7 @@ const JobCard = () => {
                 </button>
               </div>
             </div>
-            <div className="ml-6 transition duration-500 transform shadow-2xl rounded-2xl hover:scale-110">
+            <div className="transition duration-500 transform shadow-2xl rounded-2xl hover:scale-110">
               <div className="flex justify-between p-4 ">
                 <span className="px-2 py-2 font-sans text-sm text-blue-900 bg-blue-200 rounded-md">
                   A temps partiel
@@ -103,7 +119,7 @@ const JobCard = () => {
                 </button>
               </div>
             </div>
-            <div className="ml-6 transition duration-500 transform shadow-2xl rounded-2xl hover:scale-110 ">
+            <div className="transition duration-500 transform shadow-2xl rounded-2xl hover:scale-110 ">
               <div className="flex justify-between p-4">
                 <span className="px-2 py-2 font-sans text-sm text-blue-900 bg-blue-200 rounded-md">
                   A temps partiel
@@ -130,7 +146,7 @@ const JobCard = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center mt-3">
+          <div className="flex justify-center mt-5 mb-10">
             <button className="px-8 py-5 font-bold text-white duration-300 bg-blue-900 border-2 rounded-md hover:border-blue-900 hover:border-2 hover:text-blue-900 hover: hover:shadow-xl hover:bg-white">
               Parcourir tous les emplois
             </button>

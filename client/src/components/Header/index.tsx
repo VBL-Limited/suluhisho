@@ -2,134 +2,128 @@ import backgroundImage from '../../img/m2.jpeg'
 import job from '../../img/job.jpeg'
 import logo from '../../img/logo.PNG'
 import { JobCard, CategoryCard, Footer } from '../../Components'
+import React from 'react'
+import { Formik, Field, Form, ErrorMessage } from 'formik'
 const Header = () => {
+  const [showModal, setShowModal] = React.useState(false)
   return (
     <>
-      <div className="max-w-full ">
-        <div className="sticky top-0 z-10 flex justify-between bg-white shadow-md">
-          <div className="">
-            <div className="p-3 ">
-              <span className="text-2xl font-bold text-black mr-9">
-                SuluhishoApp
-              </span>
-              <a
-                href="#"
-                className="mr-5 text-2xl font-light text-blue-900 hover:text-blue-900"
+      <div className="header-2">
+        <nav className="py-2 bg-white md:py-4">
+          <div className="container px-4 mx-auto md:flex md:items-center">
+            <div className="flex items-center justify-between ">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
               >
-                Home
+                <path
+                  fillRule="evenodd"
+                  d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                  clipRule="evenodd"
+                />
+                <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+              </svg>
+              <a
+                href="/home"
+                className="text-2xl font-bold text-indigo-600 mr-9"
+              >
+                Suluhisho-RH
+              </a>
+            </div>
+
+            <div
+              className="flex-col hidden mt-3 md:flex md:flex-row md:ml-auto md:mt-0"
+              id="navbar-collapse"
+            >
+              <a
+                href="/home"
+                className="p-2 text-white bg-indigo-600 rounded lg:px-4 md:mx-2"
+              >
+                Acceuil
               </a>
               <a
-                href="#"
-                className="mr-5 text-2xl font-light text-gray-500 hover:text-blue-900"
+                href="/about"
+                className="p-2 text-gray-600 transition-colors duration-300 rounded lg:px-4 md:mx-2 hover:bg-gray-200 hover:text-gray-700"
               >
-                Employer
+                Apropos de Suluhisho-RH
               </a>
               <a
-                href="#"
-                className="mr-5 text-2xl font-light text-gray-500 hover:text-blue-900"
+                href="/pricing"
+                className="p-2 text-gray-600 transition-colors duration-300 rounded lg:px-4 md:mx-2 hover:bg-gray-200 hover:text-gray-700"
               >
-                Candidate
+                Achetez Suluhisho
+              </a>
+
+              <a
+                href="/contact"
+                className="p-2 text-gray-600 transition-colors duration-300 rounded lg:px-4 md:mx-2 hover:bg-gray-200 hover:text-gray-700"
+              >
+                Contactez-Nous
               </a>
               <a
-                href="#"
-                className="mr-5 text-2xl font-light text-gray-500 hover:text-blue-900"
+                href="/login"
+                className="p-2 text-center text-indigo-600 transition-colors duration-300 border border-transparent rounded lg:px-4 md:mx-2 hover:bg-indigo-100 hover:text-indigo-700"
               >
-                Pages
+                Se connecter
               </a>
               <a
-                href="#"
-                className="text-2xl font-light text-gray-500 hover:text-blue-900"
+                href="/signUp"
+                className="p-2 mt-1 text-center text-indigo-600 transition-colors duration-300 border border-indigo-600 border-solid rounded lg:px-4 md:mx-2 hover:bg-indigo-600 hover:text-white md:mt-0 md:ml-1"
               >
-                Contact
+                Creer un compte
               </a>
             </div>
           </div>
+        </nav>
 
-          <div className="flex p-3">
-            <div className="flex px-6 py-4 mr-3 text-white bg-blue-900 rounded-lg cursor-pointer text-md hover:bg-blue-800">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                  />
-                </svg>
-              </div>
-              <div>
-                <a href="#">Login</a>
+        <div className="py-6 bg-indigo-100 md:py-12">
+          <div className="container px-4 mx-auto">
+            <div className="max-w-2xl mx-auto text-center">
+              <h1 className="mb-2 text-3xl font-medium md:text-4xl">
+                Get the header you needed for your awesome website.
+              </h1>
+              <button className="px-6 py-2 mt-6 text-xl text-white bg-indigo-600 rounded-full">
+                Get Started
+              </button>
+              <div className="mt-4">
+                {/* Het   <img src="//via.placeholder.com/1000x785/fff?text=iMac+Mockup" alt="mockup" className="max-w-full rounded shadow-md d-block"> */}
               </div>
             </div>
-            <div className="flex px-6 py-4 text-lg text-white bg-blue-900 rounded-lg hover:bg-blue-800">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
-                  />
-                </svg>
-              </div>
-              <div>
-                <a href="#">Register</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="relative ">
-          <div
-            className="py-10 bg-cover shadow-md "
-            style={{
-              backgroundImage: `url(${backgroundImage})`,
-            }}
-          >
-            <div className="flex flex-col ">
-              <div className="py-10 px-7">
-                <span className="font-bold text-white text-8xl ">
-                  Recherchez parmi plus de 50 000 offres d'emploi.
-                </span>
-                <div className="flex justify-between mt-8 mb-10 shadow-md w-96 rounded-3xl">
-                  <div>
-                    <div className="">
-                      <input
-                        type="text"
-                        placeholder="mots clés..."
-                        className="px-6 py-6 border-r-2 w-96 text-1xl rounded-l-3xl focus:outline-none"
-                      ></input>
-                    </div>
-                  </div>
 
-                  <div>
-                    <button className="block w-auto px-40 py-6 font-bold text-white bg-blue-900 rounded-r-3xl hover:bg-blue-800 text-1xl ">
-                      Rechercher
-                    </button>
-                  </div>
-                </div>
+            <div className="mt-6 md:flex md:flex-wrap md:-mx-4 md:mt-12">
+              <div className="mt-8 text-center md:w-1/3 md:px-4 xl:px-6 md:mt-0">
+                <span className="inline-block w-20 mb-3 border-t-2 border-indigo-200 border-solid"></span>
+                <h5 className="mb-4 text-xl font-medium uppercase">
+                  Fresh Design
+                </h5>
+                <p className="text-gray-600">
+                  FWR blocks bring in an air of fresh design with their creative
+                  layouts and blocks, which are easily customizable
+                </p>
               </div>
-            </div>
-          </div>
 
-          <div className="bg-white">
-            <JobCard />
+              <div className="mt-8 text-center md:w-1/3 md:px-4 xl:px-6 md:mt-0">
+                <span className="inline-block w-20 mb-3 border-t-2 border-indigo-200 border-solid"></span>
+                <h5 className="mb-4 text-xl font-medium uppercase">
+                  Clean Code
+                </h5>
+                <p className="text-gray-600">
+                  FWR blocks are the cleanest pieces of HTML blocks, which are
+                  built with utmost care to quality and usability.
+                </p>
+              </div>
 
-            <div className="bg-gray-200">
-              <div className="">
-                <CategoryCard />
-                <Footer />
+              <div className="mt-8 text-center md:w-1/3 md:px-4 xl:px-6 md:mt-0">
+                <span className="inline-block w-20 mb-3 border-t-2 border-indigo-200 border-solid"></span>
+                <h5 className="mb-4 text-xl font-medium uppercase">
+                  Perfect Tool
+                </h5>
+                <p className="text-gray-600">
+                  FWR blocks is a perfect tool for designers, developers and
+                  agencies looking to create stunning websites in no time.
+                </p>
               </div>
             </div>
           </div>
