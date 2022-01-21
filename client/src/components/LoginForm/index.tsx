@@ -11,7 +11,10 @@ const Loginform = () => {
               alt="Workflow"
             />
             <h2 className="mt-6 text-6xl font-extrabold text-center text-gray-900">
-              Se connecter a Suluhisho-RH
+              Se connecter a
+              <span className="block pl-5 pr-5 text-indigo-600 xl:inline">
+                Suluhisho-RH
+              </span>
             </h2>
             <p className="mt-2 text-sm text-center text-gray-600">
               Ou{' '}

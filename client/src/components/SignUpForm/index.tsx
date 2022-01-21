@@ -12,7 +12,10 @@ const SignUpform = () => {
               alt="Workflow"
             />
             <h2 className="mt-6 text-6xl font-extrabold text-center text-gray-900">
-              Creer un compte Suluhisho-RH
+              Creer un compte
+              <span className="block pl-5 pr-5 text-indigo-600 xl:inline">
+                Suluhisho-RH
+              </span>
             </h2>
           </div>
           <form className="mt-8 space-y-6" action="#" method="POST">
@@ -102,7 +105,7 @@ const SignUpform = () => {
                   htmlFor="remember-me"
                   className="block ml-2 text-sm text-gray-900"
                 >
-                  Se souvenir de moi
+                  J'accepte les termes et conditions
                 </label>
               </div>
 
@@ -110,9 +113,7 @@ const SignUpform = () => {
                 <a
                   href="#"
                   className="font-medium text-indigo-600 hover:text-indigo-500"
-                >
-                  J'accepte les termes et conditions
-                </a>
+                ></a>
               </div>
             </div>
 

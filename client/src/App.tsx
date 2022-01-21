@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Header, Footer } from './Components'
-import { Home, About, Login, SignUp, Contact, Pricing } from './Pages'
+import { Home, About, Login, SignUp, Contact, Pricing, Post } from './Pages'
 
 const App = (props: any) => {
   return (
@@ -16,6 +16,7 @@ const App = (props: any) => {
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signUp" element={<SignUp />} />
+          <Route path="/post" element={<Post />} />
         </Routes>
       </BrowserRouter>
       <Footer />

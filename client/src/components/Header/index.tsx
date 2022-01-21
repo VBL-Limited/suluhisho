@@ -32,7 +32,7 @@ const Header = () => {
               id="navbar-collapse"
             >
               <NavLink
-                className="p-2 text-white bg-indigo-600 rounded lg:px-4 md:mx-2"
+                className="p-2 text-gray-600 rounded lg:px-4 md:mx-2"
                 to="/"
               >
                 Acceuil
@@ -51,7 +51,7 @@ const Header = () => {
               </NavLink>
 
               <NavLink
-                to="/pricing"
+                to="/post"
                 className="p-2 text-gray-600 transition-colors duration-300 rounded lg:px-4 md:mx-2 hover:bg-gray-200 hover:text-gray-700"
               >
                 Publiez une annonce

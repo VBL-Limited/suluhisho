@@ -4,4 +4,5 @@ import Pricing from './Pricing'
 import Login from './Login'
 import SignUp from './SignUp'
 import About from './About'
-export { Home, Contact, Pricing, About, Login, SignUp }
+import Post from './Post'
+export { Home, Contact, Pricing, Post, About, Login, SignUp }

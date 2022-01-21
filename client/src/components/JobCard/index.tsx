@@ -72,7 +72,7 @@ const JobCard = () => {
               ),
             )}
           </div>
-          <div className="flex justify-center mt-5 mb-10">
+          <div className="flex justify-center mt-1 mb-20">
             <button className="px-8 py-5 font-bold text-white duration-300 bg-indigo-600 border-2 rounded-md hover:border-blue-900 hover:border-2 hover:text-blue-900 hover: hover:shadow-xl hover:bg-white">
               Parcourir tous les emplois
             </button>
