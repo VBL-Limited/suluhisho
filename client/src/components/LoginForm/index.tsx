@@ -2,7 +2,7 @@ import { LockClosedIcon } from '@heroicons/react/solid'
 const Loginform = () => {
   return (
     <>
-      <div className="flex items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
+      <div className="flex items-center justify-center px-4 py-12 bg-indigo-50 sm:px-6 lg:px-8">
         <div className="space-y-8 ">
           <div>
             <img

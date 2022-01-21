@@ -39,7 +39,7 @@ const JobCard = () => {
         </div>
         {/* //Card */}
         <div className="">
-          <div className="grid grid-cols-6 gap-3 p-8 drop-shadow-md bg-white-100 ">
+          <div className="grid grid-cols-6 gap-3 p-8 drop-shadow-md bg-white-100 bg-indigo-50 ">
             {Jobs.map(
               ({ id, jobType, deadline, title, description }: Jobstype) => (
                 <div
