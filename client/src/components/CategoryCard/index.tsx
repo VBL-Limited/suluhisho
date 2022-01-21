@@ -6,7 +6,7 @@ const CategoryCard = () => {
           <span className="text-4xl font-bold text-gray-600">
             Catégories d'emploi
           </span>
-          <p className="text-md text=slate-700 px-20 py-10 font-mono">
+          <p className="text-md text=slate-700 px-20 py-10">
             ext ever since the 1500s, when an unknown printer took a galley of
             type and scrambled it to make a type specimen book. It has survived
             not only five centuries, but also the leap into electronic
@@ -15,7 +15,6 @@ const CategoryCard = () => {
             passages, and more recently with desktop publishing software like
             Aldus PageMaker including versions of Lorem Ipsum.
           </p>
-          
         </div>
         <div className="">
           <div className="grid grid-cols-4 gap-3 p-8 mt-5 ml-6 mr-6 drop-shadow-md bg-white-100 ">
@@ -40,7 +39,7 @@ const CategoryCard = () => {
               <span className="font-sans text-gray-500 hover:text-white text-1xl">
                 Comptabilité et finance
               </span>
-              <span className="p-3 mt-2 text-sm font-bold text-blue-900 bg-blue-300 rounded-md hover:text-white">
+              <span className="p-3 mt-2 text-sm font-bold text-white bg-indigo-600 rounded-md hover:text-white">
                 1200 emplois
               </span>
             </div>
@@ -65,7 +64,7 @@ const CategoryCard = () => {
               <span className="font-sans text-gray-500 text-1xl ">
                 Technologies
               </span>
-              <span className="p-3 mt-2 text-sm font-bold text-blue-900 bg-blue-300 rounded-md">
+              <span className="p-3 mt-2 text-sm font-bold text-white bg-indigo-600 rounded-md">
                 1200 emplois
               </span>
             </div>
@@ -88,7 +87,7 @@ const CategoryCard = () => {
               </div>
 
               <span className="font-sans text-gray-500 text-1xl">ONG</span>
-              <span className="p-3 mt-2 text-sm font-bold text-blue-900 bg-blue-300 rounded-md">
+              <span className="p-3 mt-2 text-sm font-bold text-white bg-indigo-600 rounded-md">
                 1200 emplois
               </span>
             </div>
@@ -113,49 +112,13 @@ const CategoryCard = () => {
               <span className="font-sans text-gray-500 text-1xl">
                 ingénierie et industrie
               </span>
-              <span className="p-3 mt-2 text-sm font-bold text-blue-900 bg-blue-300 rounded-md">
+              <span className="p-3 mt-2 text-sm font-bold text-white bg-indigo-600 rounded-md">
                 1200 emplois
               </span>
             </div>
           </div>
         </div>
-        <div>
-          <div className="flex flex-col items-center justify-center p-20 bg-blue-900">
-            <span className="mb-6 text-4xl font-bold text-white">
-              Subscribe Our Newsletter!
-            </span>
-            <span className="mb-6 text-sm text-white">
-              ext ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it
-            </span>
-            <div className="flex justify-between w-3/5 p-2 mt-5 bg-white rounded-md shadow-lg">
-              <div className="flex w-full">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="items-center w-14 h-14"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="#1e3a8a"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
-                  />
-                </svg>
-                <input
-                  className="w-4/5 px-3 py-3 focus:outline-none"
-                  type="text"
-                  placeholder="veuillez entrer votre adresse e-mail"
-                ></input>
-              </div>
-              <button className="px-8 py-3 font-bold text-white bg-blue-900 rounded-md hover:bg-blue-800">
-                s'abonner
-              </button>
-            </div>
-          </div>
-        </div>
+        <div></div>
       </div>
     </>
   )

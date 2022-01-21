@@ -1,23 +1,24 @@
 import React from 'react'
 import './App.css'
-import { BrowserRouter, Routes, Route, Router } from 'react-router-dom'
-import { Header, Loading } from './Components'
-import { Home, About, Contact, Pricing } from './Pages'
-const App = () => {
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Header, Footer } from './Components'
+import { Home, About, Login, SignUp, Contact, Pricing } from './Pages'
+
+const App = (props: any) => {
   return (
     <>
-      <div>
+      <BrowserRouter>
         <Header />
-
-        <BrowserRouter>
-          <Routes>
-            <Route path="/home" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signUp" element={<SignUp />} />
+        </Routes>
+      </BrowserRouter>
+      <Footer />
     </>
   )
 }

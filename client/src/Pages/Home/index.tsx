@@ -1,4 +1,10 @@
+import { Hero, JobCard } from '../../Components'
 const Home = () => {
-  return <>Home</>
+  return (
+    <>
+      <Hero />
+      <JobCard />
+    </>
+  )
 }
 export default Home
