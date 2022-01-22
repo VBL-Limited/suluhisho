@@ -1,23 +1,27 @@
 const { model, Schema } = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 
+const OrganisationSchema = new Schema({
+    denomination: {
+        type: String,
+        required: true
+    },
+	forme_juridique: {
+        type: String,
+        required: true
+    },
+	state:{  
+        type: String,
+        defualt: 'TRIAL' //- [trial, paid, ....]
+    },
+	duration: {
+        type: Number,
+        default: 0 // in days
+    }
+});
+
 const UserSchema = new Schema({
-    denomination_sociale:{
-        type: String,
-        required: true
-    },
-    forme_juridique:{
-        type: String,
-        required: true
-    },
-    ville:{
-        type: String,
-        required: true
-    },
-    adresse:{
-        type: String,
-        required: true
-    },
+    
     email:{
         type: String,
         unique: true,
@@ -28,6 +32,20 @@ const UserSchema = new Schema({
         required: true
     },
     mobile:{
+        type: String,
+        unique: true,
+        required: true
+    },
+    role: {
+        type: String,
+        defaut: 'AGENT'
+    },    
+    organisation: OrganisationSchema,
+    ville:{
+        type: String,
+        required: true
+    },
+    adresse:{
         type: String,
         required: true
     },

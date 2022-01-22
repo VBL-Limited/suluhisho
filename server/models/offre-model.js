@@ -28,7 +28,14 @@ const OffreSchema = new Schema({
     email: {
         type: String,
         required: true
-    }  
+    },
+    mobile: {
+        type: String,
+        required: true
+    },
+    tag: {
+        type: String
+    }
 });
 
 module.exports = model('Offre', OffreSchema);
