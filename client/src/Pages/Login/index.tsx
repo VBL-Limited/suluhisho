@@ -1,8 +1,12 @@
+import { FormikValues } from 'formik'
 import { Loginform } from '../../Components'
 const Login = () => {
+  const handleSubmit = (values: FormikValues) => {
+    console.log(values)
+  }
   return (
     <>
-      <Loginform />
+      <Loginform handleLogin={(val: any) => handleSubmit(val)} />
     </>
   )
 }

@@ -2,7 +2,16 @@ import React from 'react'
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Header, Footer } from './Components'
-import { Home, About, Login, SignUp, Contact, Pricing, Post } from './Pages'
+import {
+  Home,
+  About,
+  Login,
+  SignUp,
+  Contact,
+  Pricing,
+  Post,
+  AddJob,
+} from './Pages'
 
 const App = (props: any) => {
   return (
@@ -12,6 +21,7 @@ const App = (props: any) => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/AddJob" element={<AddJob />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
