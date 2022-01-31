@@ -1,4 +1,4 @@
-import { Hero } from '../../Components'
+import { Hero } from '../../components'
 const HomeHeader = () => {
   return (
     <>

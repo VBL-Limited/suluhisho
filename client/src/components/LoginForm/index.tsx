@@ -9,8 +9,9 @@ const validationSchema = Yup.object({
 })
 type loginProps = {
   handleLogin?: any
+  error?: any
 }
-const Loginform = ({ handleLogin }: loginProps) => {
+const Loginform = ({ handleLogin, error }: loginProps) => {
   return (
     <>
       <div className="flex items-center justify-center px-4 py-12 bg-indigo-50 sm:px-6 lg:px-8">
@@ -46,6 +47,11 @@ const Loginform = ({ handleLogin }: loginProps) => {
               <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
                 <input type="hidden" name="remember" defaultValue="true" />
                 <div className="rounded-md shadow-sm ">
+                  {error && (
+                    <span className="font-bold text-red-600 text-md">
+                      {error}
+                    </span>
+                  )}
                   <div>
                     <label htmlFor="email-address" className="sr-only">
                       Addresse email

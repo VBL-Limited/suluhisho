@@ -1,4 +1,4 @@
-import { Hero, JobCard } from '../../Components'
+import { Hero, JobCard } from '../../components'
 const Home = () => {
   return (
     <>

@@ -11,12 +11,12 @@ import SignUpform from './SignUpForm'
 export {
   SignUpform,
   Header,
-  Loginform,
   JobCard,
+  Loginform,
   CategoryCard,
   Footer,
-  Loading,
-  Hero,
   SubscriberBox,
+  Hero,
   HomeHeader,
+  Loading,
 }
