@@ -3,16 +3,17 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      extend: {
         fontFamily: {
-            body:['Montserrat']
+            body:['Montserrat'],
+            text:['IBM Plex Sans Thai Looped', 'sans-serif'],
+           bode2: ['Montserrat', 'sans-serif;']
         },
-
-    },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
