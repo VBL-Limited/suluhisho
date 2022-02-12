@@ -80,16 +80,16 @@ const Pricing = () => {
             </div>
             <div className="text-sm border-0 border-t border-solid border-grey-light">
               <div className="py-4 text-center border-0 border-b border-solid border-grey-light">
-                Unlimited Ice Creams
+                Annonce illimitees
               </div>
               <div className="py-4 text-center border-0 border-b border-solid border-grey-light">
-                Unlimited Cones
+                Plus de 50 compte asocie a l'organization
               </div>
               <div className="py-4 text-center border-0 border-b border-solid border-grey-light">
-                Unlimited toppings
+                Mise a jour journalier
               </div>
               <div className="py-4 text-center border-0 border-b border-solid border-grey-light">
-                Analytics
+                Gestion de taxes et paie
               </div>
             </div>
             <div className="px-8 pt-8 mt-auto text-xl text-center">

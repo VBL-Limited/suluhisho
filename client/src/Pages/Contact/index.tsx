@@ -63,7 +63,7 @@ const Contact = () => {
             </div>
             <form className="w-full max-w-[600px] mx-auto space-y-5 mt-5 p-5 rounded-lg shadow-md border-2 bg-white md:mt-7">
               <label className="block">
-                <p>Name</p>
+                <p>Nom</p>
                 <div className="relative flex items-center mt-2.5 group text-gray-400 focus-within:text-blue-600">
                   <svg
                     className="absolute w-6 h-6 pointer-events-none left-5"

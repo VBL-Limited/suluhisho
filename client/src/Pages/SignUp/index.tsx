@@ -2,12 +2,11 @@ import { SignUpform } from '../../components'
 import { FormikValues } from 'formik'
 import axios from 'axios'
 import { useState } from 'react'
-import {} from 'react-router-dom'
-import { Navigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 const SignUp = () => {
   const [errorMessage, setErrorMessage] = useState()
+  const navigate = useNavigate()
   const handleSignUp = (values: FormikValues) => {
-    console.log(values)
     axios
       .post('http://127.0.0.1:5000/api/auth/signup', {
         values,
@@ -17,7 +16,8 @@ const SignUp = () => {
           console.log(response)
           if (response.data.success) {
             localStorage.setItem('user', response.data)
-            ;<Navigate to="AddJob" />
+            navigate('AddJob')
+            window.location.reload()
           }
           setErrorMessage(response.data.message)
         },

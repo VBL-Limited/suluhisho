@@ -10,8 +10,9 @@ const validationSchema = Yup.object({
 type loginProps = {
   handleLogin?: any
   error?: any
+  loading?: boolean
 }
-const Loginform = ({ handleLogin, error }: loginProps) => {
+const Loginform = ({ handleLogin, error, loading }: loginProps) => {
   return (
     <>
       <div className="flex items-center justify-center px-4 py-12 bg-indigo-50 sm:px-6 lg:px-8">
@@ -38,6 +39,7 @@ const Loginform = ({ handleLogin, error }: loginProps) => {
               </a>
             </p>
           </div>
+
           <Formik
             initialValues={{ email: '', password: '' }}
             validationSchema={validationSchema}
@@ -119,21 +121,26 @@ const Loginform = ({ handleLogin, error }: loginProps) => {
                     </a>
                   </div>
                 </div>
-
-                <div>
-                  <button
-                    type="submit"
-                    className="relative flex justify-center w-full px-4 py-4 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  >
-                    <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                      <LockClosedIcon
-                        className="w-5 h-20 text-indigo-500 group-hover:text-indigo-400"
-                        aria-hidden="true"
-                      />
-                    </span>
-                    Connexion
-                  </button>
-                </div>
+                {loading ? (
+                  <div className="flex items-center justify-center ">
+                    <div className="w-20 h-20 border-b-4 border-indigo-600 rounded-full animate-spin"></div>
+                  </div>
+                ) : (
+                  <div>
+                    <button
+                      type="submit"
+                      className="relative flex justify-center w-full px-4 py-4 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    >
+                      <span className="absolute inset-y-0 left-0 flex items-center pl-3">
+                        <LockClosedIcon
+                          className="w-5 h-20 text-indigo-500 group-hover:text-indigo-400"
+                          aria-hidden="true"
+                        />
+                      </span>
+                      Connexion
+                    </button>
+                  </div>
+                )}
               </form>
             )}
           </Formik>
